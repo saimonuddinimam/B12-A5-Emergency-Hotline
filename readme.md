@@ -12,11 +12,7 @@ To create and insert a new element in the DOM, first use document.createElement(
 
 3. What is Event Bubbling and how does it work?
 Ans:
-When an event happens, it doesn’t stop at the element.
-
-It travels upward (child → parent → document).
-
-Example: Clicking a button also triggers click on its parent div.
+Event bubbling means that when you trigger an event (like clicking a button), it first runs on that exact element, then moves up to its parent, then the parent’s parent, and so on until it reaches the top of the page. For example, clicking a button inside a <div> will fire the button’s event, then the div’s event, then the body’s event. This lets us use event delegation, where instead of adding listeners to many small elements, we can add one listener to a parent and still catch the events.
 
 4. What is Event Delegation and why is it useful?
 Ans:
