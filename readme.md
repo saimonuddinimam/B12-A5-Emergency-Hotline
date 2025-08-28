@@ -16,9 +16,9 @@ Event bubbling means that when you trigger an event (like clicking a button), it
 
 4. What is Event Delegation and why is it useful?
 Ans:
-Instead of adding listeners to every child, we add one to the parent and use event.target to check which child was clicked.
-
-Saves performance and works for dynamically added elements.
+Event Delegation is a technique where you attach a single event listener to a parent element instead of adding separate listeners to each child element. This works because of event bubbling—when an event happens on a child, it automatically bubbles up to the parent.
+Inside the parent’s event handler, you can use event.target to identify which child element triggered the event. This allows you to manage all child interactions with just one listener.
+The main advantages of event delegation are better performance, automatic handling of dynamically added elements, and cleaner, easier-to-maintain code. It’s especially useful for lists, tables, or any group of elements that might change over time.
 
 5. What is the Difference between preventDefault() and stopPropagation() methods?
 Ans:
